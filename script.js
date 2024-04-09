@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var fileFormat = document.getElementById("fileFormat").value;
         var qrCodeImage = document.querySelector("#qrCode img");
         var downloadLink = document.createElement("a");
+        var timestamp = Date.now();
         downloadLink.href = qrCodeImage.src;
-        downloadLink.download = "qrcode." + fileFormat;
+        downloadLink.download = "qrcode_" + timestamp + "." + fileFormat;
         downloadLink.click();
     });
 });
+
