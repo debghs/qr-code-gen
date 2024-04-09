@@ -26,7 +26,6 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid black;
-    border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     box-shadow: 0 0 10px white; /* shadow */
@@ -52,7 +51,7 @@ body {
     background-color: burlywood;
     margin: 20px auto;
     border: 2px solid beige;;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     box-shadow: 0 0 10px white; /* shadow */
     overflow: hidden; /* Ensure the map stays within bounds */
 }
