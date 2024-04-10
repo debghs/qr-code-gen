@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadLink.click();
     });
 
-    var shareButton = document.getElementById('copyButton');
-    shareButton.addEventListener('click', function() {
+    var copyButton = document.getElementById('copyButton');
+    copyButton.addEventListener('click', function() {
         if (qrCode === null) {
             alert("Please generate a QR code first.");
             return;
@@ -69,4 +69,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 'image/png');
     });
 });
-
