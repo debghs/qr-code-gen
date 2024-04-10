@@ -1,13 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     var qrCode = null;
+    var textInput = document.getElementById('textInput');
 
-    var generateButton = document.getElementById('generateButton');
-    generateButton.addEventListener('click', function() {
-        var text = document.getElementById('textInput').value.trim();
+    qrCode = new QRCode("qrCode", {  //initial load-screen message
+        text: "hello",
+        width: 300,
+        height: 300
+    });
+
+    textInput.addEventListener('input', function() {
+        var text = textInput.value.trim();
         if (text === "") {
-            alert("Please enter some text.");
+            // Clear the QR code container if no text is entered
+            if (qrCode !== null) {
+                qrCode.clear();
+            }
             return;
         }
+
         if (qrCode === null) {
             qrCode = new QRCode("qrCode", {
                 text: text,
@@ -59,4 +69,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 'image/png');
     });
 });
-
